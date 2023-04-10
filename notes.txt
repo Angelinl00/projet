@@ -1,0 +1,2 @@
+* ajouter un component pour la navbar
+* ajouter un autre component pour les deux div du milieu de la page
