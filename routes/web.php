@@ -19,7 +19,16 @@ Route::get('/laravel', function () {
     return view('welcome');
 });
 
+Route::get('/inscription' , [UtilisateurController::class , 'inscription'])->name('inscripton') ;
+Route::get('/connection' , [UtilisateurController::class , 'connection'])->name('connection') ;
+Route::post('/create' , [UtilisateurController::class , 'store'])->name('create.user') ;
+Route::post('/connect' , [UtilisateurController::class , 'connect'])->name('connect.user') ;
+
 Route::get('/' , [UtilisateurController::class , 'index']) ;
+
+Route::middleware('admin')->group(function() {
+    Route::get('admin' , [UtilisateurController::class , 'admin']) ;
+}) ;
 
 Route::get('/dashboard', function () {
     return view('dashboard');
