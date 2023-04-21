@@ -66,6 +66,6 @@ class UtilisateurController extends Controller
     }
 
     public function admin() {
-        
+
     }
 }
