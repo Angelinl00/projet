@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Groupe;
 use App\Models\Bulletin;
 use App\Models\Paiement;
 use Laravel\Sanctum\HasApiTokens;
@@ -40,6 +41,10 @@ class User extends Authenticatable
 
     public function bulletins(){
         return $this->hasMany(Bulletin::class);
+    }
+
+    public function groupes() {
+        return $this->belongsTo(Groupe::class);
     }
 
     /**

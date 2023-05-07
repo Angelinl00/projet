@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use App\Models\Groupe;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -26,6 +27,8 @@ return new class extends Migration
             $table->string('serie')->nullable();
             $table->boolean('is_prof')->default(false);
             $table->boolean('is_admin')->default(false);
+
+            $table->foreignIdFor(Groupe::class)->constrained()->cascadeOnDelete();
 
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
