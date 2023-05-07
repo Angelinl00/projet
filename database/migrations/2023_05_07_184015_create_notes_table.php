@@ -1,7 +1,8 @@
 <?php
 
-use App\Models\Level;
-use App\Models\Groupe;
+use App\Models\User;
+use App\Models\Matiere;
+use App\Models\Typenote;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -13,10 +14,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('classes', function (Blueprint $table) {
+        Schema::create('notes', function (Blueprint $table) {
             $table->id();
-            $table->integer('effectif');
-            $table->float('moyenne')->nullable();
+            $table->float('note');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('classes');
+        Schema::dropIfExists('notes');
     }
 };

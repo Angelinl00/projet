@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('classes', function (Blueprint $table) {
-            $table->id();
-            $table->integer('effectif');
-            $table->float('moyenne')->nullable();
-            $table->timestamps();
+        Schema::table('classes', function (Blueprint $table) {
+            $table->foreignIdFor(Groupe::class)->constrained()->cascadeOnDelete();
+            $table->foreignIdFor(Level::class)->constrained()->cascadeOnDelete();
         });
     }
 
@@ -26,6 +24,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('classes');
+        Schema::table('classes', function (Blueprint $table) {
+            $table->dropForeignIdFor(Groupe::class);
+            $table->dropForeignIdFor(Level::class);
+        });
     }
 };

@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Level;
 use App\Models\Groupe;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -13,11 +12,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('classes', function (Blueprint $table) {
-            $table->id();
-            $table->integer('effectif');
-            $table->float('moyenne')->nullable();
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreignIdFor(Groupe::class)->constrained()->cascadeOnDelete();
         });
     }
 
@@ -26,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('classes');
+        Schema::table('users', function (Blueprint $table) {
+            $table->$table->dropForeignIdFor(Groupe::class);
+        });
     }
 };

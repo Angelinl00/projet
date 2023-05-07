@@ -18,8 +18,6 @@ return new class extends Migration
             $table->text('bulletin');
             $table->float('moyenne');
             $table->timestamps();
-
-            $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete();
         });
     }
 

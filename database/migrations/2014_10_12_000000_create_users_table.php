@@ -28,8 +28,6 @@ return new class extends Migration
             $table->boolean('is_prof')->default(false);
             $table->boolean('is_admin')->default(false);
 
-            $table->foreignIdFor(Groupe::class)->constrained()->cascadeOnDelete();
-
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

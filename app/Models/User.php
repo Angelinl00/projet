@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Note;
 use App\Models\Groupe;
 use App\Models\Bulletin;
 use App\Models\Paiement;
@@ -45,6 +46,10 @@ class User extends Authenticatable
 
     public function groupes() {
         return $this->belongsTo(Groupe::class);
+    }
+
+    public function notes() {
+        return $this->hasMany(Note::class);
     }
 
     /**

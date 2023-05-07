@@ -19,10 +19,6 @@ return new class extends Migration
             $table->float('montant');
             $table->text('justificatif')->nullable();
             $table->timestamps();
-
-            $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete();
-            $table->foreignIdFor(TypePaiement::class)->constrained()->cascadeOnDelete();
-            $table->foreignIdFor(Modepaiement::class)->constrained()->cascadeOnDelete();
         });
     }
 
