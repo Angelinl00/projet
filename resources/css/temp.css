@@ -12,6 +12,24 @@ body{
     height : 100vh ;
     margin-top: 0;
     align-items: center;
+    overflow : hidden;
+}
+
+ul {
+    position : relative ;
+    right : 10px ;
+    width: 100%;
+    height : 100% ;
+    display : flex ;
+    flex-direction : row ;
+    list-style-type: none;
+    flex-direction: row;
+}
+ul li {
+    display : flex ;
+    flex-direction: row;
+    height : 100% ;
+    width : 150px ;
 }
 
 .g {
@@ -30,51 +48,51 @@ a{
     display : flex ;
     flex-direction: row-reverse;
     overflow : hidden ;
+    height : 7vh ;
+    width : 100vw ;
+    padding : 10px ;
 }
 .topbar a{
     text-decoration: none;
     /* padding-right: 15px; */
 }
 .topbar-div a{
-    /* display: inline-block; */
     margin: 0 20px;
     color: rgba(255, 255,255, 0,67);
     transition: 0,5s;
 }
 .topbar-div{
-    text-align: center;
+    width : 80% ;
     padding-bottom: 16px;
 }
 /* .topbar-div a:hover , .topbar-div a:active
 {
 
 } */
-.topbar-c{
+/* .topbar-c{
     font-size: 20px;
     padding-left: 75px;
     margin-left:  75px;
-}
+} */
 .g{
-    font-size: 20px;  
+    font-size: 20px;
 }
 
 @media only screen and (min-width:100px){
     .topbar{
         justify-content: center;
         align-items: center;
-        height: 64px;
         padding: 0 25px;
     }
 }
 .container{
-   padding: auto; 
-   
+   padding: auto;
    margin: 0 auto;
-   height: 470px;
+   height: 93vh;
    background-color: whitesmoke;
    overflow: scroll;
-   
-   
+
+
 }
 footer{
     height: 250px;
@@ -85,7 +103,7 @@ footer a:hover , footer a:active
 {
     color: rgb(29, 64, 179);
 }
-    
+
 footer a{
     text-decoration: none;
 }

@@ -14,52 +14,52 @@
 <body >
     <header class="topbar">
         <div class="topbar-div">
-
             <a href="#" class="g">HighSchool</a>
-            <a href="#" class="active">Home</a>
-            <a href="#">A Propos</a>
-            <a href="#">Actualités</a>
-            <a href="#">Evènement</a>
-            <a href="#">Contact</a>
-            <a href="#" class="topbar-c"><i class="far fa-user"></i>Connexion</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">A Propos</a></li>
+                <li><a href="#">Actualités</a></li>
+                <li><a href="#">Evènement</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" {{-- class="topbar-c" --}}><i class="far fa-user"></i>Connexion</a></li>
+            </ul>
 
         </div>
     </header>
 
-<div class="container">
-    <!-- Container -->
+    <div class="container">
+        <!-- Container -->
 
-    @yield('content')
+        @yield('content')
+
+        <footer>
+            <div class="h">
+                <a href="#" >HighSchool</a>
+            </div>
+
+            <nav class="fbar"> <br>
+                <a href="#"><b>Menu</b></a><br><br>
+                <a href="#">Home</a> <br><br>
+                <a href="#">A Propos</a> <br><br>
+                <a href="#">Actualités</a><br><br>
+                <a href="#">Evènement</a> <br><br>
+                <a href="#">Contact</a>
+            </nav>
 
 
-</div>
+            <nav class="fobar">
+                <a href="#"><b>Contenu</b>   </a> <br><br>
+                <a href="#">Termes et conditions</a> <br><br>
+                <a href="#">A Propos</a> <br><br>
+                <a href="#">Politiques de confidentialité</a><br><br>
+                <a href="#">Mention légale</a> <br><br>
+                <a href="#">Politiques de cookies</a>
+            </nav><br><br>
 
-<footer>
-    <div class="h">
-        <a href="#" >HighSchool</a>
+            <div class="c"><h4>2023 par Université HighSchool Crée avec SLICmart</h4></div>
+
+        </footer>
+
     </div>
-
-    <nav class="fbar"> <br>
-        <a href="#"><b>Menu</b></a><br><br>
-        <a href="#">Home</a> <br><br>
-        <a href="#">A Propos</a> <br><br>
-        <a href="#">Actualités</a><br><br>
-        <a href="#">Evènement</a> <br><br>
-        <a href="#">Contact</a>
-    </nav>
-
-
-    <nav class="fobar">
-        <a href="#"><b>Contenu</b>   </a> <br><br>
-        <a href="#">Termes et conditions</a> <br><br>
-        <a href="#">A Propos</a> <br><br>
-        <a href="#">Politiques de confidentialité</a><br><br>
-        <a href="#">Mention légale</a> <br><br>
-        <a href="#">Politiques de cookies</a>
-    </nav><br><br>
-
-    <div class="c"><h4>2023 par Université HighSchool Crée avec SLICmart</h4></div>
-
-</footer>
 </body>
 </html>
