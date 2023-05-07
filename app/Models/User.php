@@ -3,10 +3,12 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Bulletin;
+use App\Models\Paiement;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
@@ -20,8 +22,25 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'prenom',
+        'matricule',
+        'naissance',
+        'telephone',
+        'login',
+        'acte_naissance',
+        'photo',
+        'certificat_medical',
+        'serie',
         'password',
     ];
+
+    public function paiements() {
+        return $this->hasMany(Paiement::class);
+    }
+
+    public function bulletins(){
+        return $this->hasMany(Bulletin::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
