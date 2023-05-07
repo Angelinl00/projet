@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    height : 100vh ;
-    width : 100vw ;
+.test {
+    display: flex;
+    height : 500px ;
+    width : 100px ;
     background-color: blueviolet;
+}
+
+.test2 {
+    font-weight: bold;
+    font-family : algerian;
 }

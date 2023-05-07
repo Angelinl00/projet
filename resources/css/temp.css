@@ -1,0 +1,122 @@
+* {
+    padding : 0 ;
+    margin : 0 ;
+    box-sizing : border-box ;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    color: rgb(0,0,0.6);
+    width: 100vw;
+    height : 100vh ;
+    margin-top: 0;
+    align-items: center;
+}
+
+.g {
+    position : absolute ;
+    left : 10px ;
+    font-size : 25px ;
+}
+
+a{
+    color: inherit;
+}
+.topbar{
+    background-color: #2C3E50;
+    color: #FFF;
+    font-size : 22px ;
+    display : flex ;
+    flex-direction: row-reverse;
+    overflow : hidden ;
+}
+.topbar a{
+    text-decoration: none;
+    /* padding-right: 15px; */
+}
+.topbar-div a{
+    /* display: inline-block; */
+    margin: 0 20px;
+    color: rgba(255, 255,255, 0,67);
+    transition: 0,5s;
+}
+.topbar-div{
+    text-align: center;
+    padding-bottom: 16px;
+}
+/* .topbar-div a:hover , .topbar-div a:active
+{
+
+} */
+.topbar-c{
+    font-size: 20px;
+    padding-left: 75px;
+    margin-left:  75px;
+}
+.g{
+    font-size: 20px;  
+}
+
+@media only screen and (min-width:100px){
+    .topbar{
+        justify-content: center;
+        align-items: center;
+        height: 64px;
+        padding: 0 25px;
+    }
+}
+.container{
+   padding: auto; 
+   
+   margin: 0 auto;
+   height: 470px;
+   background-color: whitesmoke;
+   overflow: scroll;
+   
+   
+}
+footer{
+    height: 250px;
+    background-color: rgb(29, 29, 121);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+footer a:hover , footer a:active
+{
+    color: rgb(29, 64, 179);
+}
+    
+footer a{
+    text-decoration: none;
+}
+
+.h{
+    display: inline-block;
+    justify-content: center;
+    font-size: 40px;
+    color:  #FFF;
+    margin-left: 10px;
+}
+
+.fbar{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 50px;
+    padding-left: 200px;
+    color:  #FFF;
+
+
+}
+.fobar{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 50px;
+    padding-left: 200px;
+    color:  #FFF;
+
+
+}
+.c{
+    text-align: center;
+    color: #FFF ;
+}
